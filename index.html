@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The CC - Terms & Conditions and Privacy Policy</title>
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #333333;
+      --bg-dark: #1e1e1e;
+      --text-dark: #dddddd;
+      --btn-bg-light: rgba(0, 0, 0, 0.1);
+      --btn-bg-dark: rgba(255, 255, 255, 0.15);
+    }
+    html[data-theme='light'] {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+    html[data-theme='dark'] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    body {
+      margin: 0;
+      padding: 40px 60px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    h1, h2, h3 {
+      margin-top: 2em;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    p, li {
+      margin-bottom: 1em;
+    }
+    ul, ol {
+      margin-left: 1.5em;
+      margin-bottom: 1em;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      opacity: 0.2;
+      margin: 2em 0;
+    }
+    .last-updated {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 2rem;
+    }
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      background-color: var(--btn-bg-dark);
+      border: none;
+      border-radius: 6px;
+      color: inherit;
+      padding: 0.5em 0.8em;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+    html[data-theme='light'] .theme-toggle {
+      background-color: var(--btn-bg-light);
+    }
+    .theme-toggle:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+    .theme-toggle svg {
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+    .contact {
+      font-weight: bold;
+    }
+    em {
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div style="display:flex; justify-content:flex-end; margin-bottom:20px;">
+    <button class="theme-toggle" id="toggleBtn">
+      <svg id="themeIcon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M21.752 15.002A9.718 9.718 0 0112 21.75 9.75 9.75 0 1121.752 15z"/>
+      </svg>
+      <span id="toggleText">Light Mode</span>
+    </button>
+  </div>
+
+  <h1>Terms &amp; Conditions and Privacy Policy for The CC (The Currency Converter)</h1>
+  <p class="last-updated">Last updated: May 21, 2025</p>
+
+  <h2>1. License &amp; Use</h2>
+  <ul>
+    <li><strong>Free License.</strong> You are granted a personal, non-exclusive, non-transferable, revocable license to install and use the App on your mobile device for personal or business currency-conversion purposes.</li>
+    <li><strong>No Warranty.</strong> The App and its Services are provided “AS IS” without any warranties—express or implied—regarding accuracy, availability, or fitness for a particular purpose.</li>
+  </ul>
+  <hr>
+
+  <h2>2. App Data Handling</h2>
+  <h3>No Data Collection by the App</h3>
+  <ul>
+    <li>The App does <strong>not</strong> collect, store, or transmit any personal or usage data.</li>
+    <li>There is no analytics SDK, crash-reporting, or user-tracking built into the App.</li>
+  </ul>
+  <h3>Transient Caching</h3>
+  <ul>
+    <li>To optimize performance, the App may hold fetched exchange rates in memory for up to eight (8) hours.</li>
+    <li>This cache is cleared when the App is closed or after eight hours and is never written to permanent storage.</li>
+  </ul>
+  <hr>
+
+  <h2>3. API &amp; Exchange‐Rate Data</h2>
+  <ul>
+    <li><strong>Source of Data.</strong> All currency-exchange rates (“Data”) are fetched in real time, on demand, from the currencybeacon.com API.</li>
+    <li><strong>Attribution.</strong> In compliance with API Provider requirements, the App displays “Data provided by currencybeacon.com” on its About/Legal screen.</li>
+    <li><strong>Data Accuracy.</strong> Rates are for informational purposes only; actual market rates may vary.</li>
+  </ul>
+  <hr>
+
+  <h2>4. Privacy Policy</h2>
+  <h3>4.1 Information We Collect</h3>
+  <ul>
+    <li><strong>None.</strong> We do not collect any personally identifiable information (PII), usage analytics, or crash reports.</li>
+  </ul>
+  <h3>4.2 Third-Party Data Handling</h3>
+  <ul>
+    <li><strong>Responsibility.</strong> All data privacy and retention practices for exchange rates are managed by the API Provider. Direct any inquiries about that service’s privacy practices to currencybeacon.com.</li>
+  </ul>
+  <h3>4.3 Children’s Privacy</h3>
+  <ul>
+    <li><strong>Under 13.</strong> The App is not intended for use by children under 13. We do not knowingly collect information from minors.</li>
+  </ul>
+  <h3>4.4 Security</h3>
+  <ul>
+    <li><strong>Transmission.</strong> All API requests use HTTPS/TLS encryption.</li>
+    <li><strong>No Persistent Storage.</strong> No user or rate data is stored on the App or our servers.</li>
+  </ul>
+  <hr>
+
+  <h2>5. Prohibited Conduct</h2>
+  <ol>
+    <li>Reverse-engineer, decompile, modify, or tamper with the App’s code.</li>
+    <li>Extract, redistribute, or republish Data outside the App (e.g., embedding rates into other products).</li>
+    <li>Use automated scripts or scraping tools to query the API beyond normal App behavior.</li>
+  </ol>
+  <hr>
+
+  <h2>6. Liability Limitation</h2>
+  <p>To the fullest extent permitted by law, neither the Developer nor the API Provider shall be liable for any indirect, incidental, special, or consequential damages arising from your use of the App or its Data. Our total liability is limited to the cost of the device on which the App is installed, if applicable.</p>
+  <hr>
+
+  <h2>7. Termination</h2>
+  <p>We may suspend or terminate this Agreement and your access to the App if you violate any terms herein. Upon termination, you must uninstall the App and cease use of all Data.</p>
+  <hr>
+
+  <h2>8. Changes to This Agreement</h2>
+  <p>We may update this Agreement at any time. Changes take effect upon posting the revised “Last updated” date. Continued use after changes signifies acceptance. If you do not agree, please uninstall the App.</p>
+  <hr>
+
+  <h2>9. Governing Law & Jurisdiction</h2>
+  <p>This Agreement shall be governed by and construed in accordance with the laws of India, including but not limited to the Information Technology Act, 2000 and relevant consumer protection laws. Any dispute arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts in Bengaluru, Karnataka, India.</p>
+  <hr>
+
+  <h2>10. Contact</h2>
+  <p class="contact">For questions, legal notices, or privacy inquiries, please contact:<br><a href="mailto:c1ph3rj@gmail.com">c1ph3rj@gmail.com</a></p>
+  <hr>
+  <em>By using The CC, you acknowledge that you have read, understood, and agree to these Terms & Conditions and Privacy Policy.</em>
+
+  <script>
+    const btn = document.getElementById('toggleBtn');
+    const icon = document.getElementById('themeIcon-dark');
+    const text = document.getElementById('toggleText');
+    btn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      if (next === 'light') {
+        icon.innerHTML = '<path d="M12 4.5a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 12 4.5zm5.657 2.343a.75.75 0 0 1 1.06 1.06l-.707.707a.75.75 0 0 1-1.06-1.06l.707-.707zM12 18a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 12 18zm-5.657-1.657a.75.75 0 0 1 1.06 0l.707.707a.75.75 0 1 1-1.06 1.06l-.707-.707a.75.75 0 0 1 0-1.06zM6 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 6 12zm11 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1A.75.75 0 0 1 17 12zM7.05 7.05a.75.75 0 0 1 1.06 0l.707.707a.75.75 0 0 1-1.06 1.06l-.707-.707a.75.75 0 0 1 0-1.06zm9.192 9.192a.75.75 0 0 1 0 1.06l-.707.707a.75.75 0 0 1-1.06-1.06l.707-.707a.75.75 0 0 1 1.06 0z"/>';
+        text.textContent = 'Dark Mode';
+        btn.style.backgroundColor = 'var(--btn-bg-light)';
+      } else {
+        icon.innerHTML = '<path d="M21.752 15.002A9.718 9.718 0 0112 21.75 9.75 9.75 0 1121.752 15z"/>';
+        text.textContent = 'Light Mode';
+        btn.style.backgroundColor = 'var(--btn-bg-dark)';
+      }
+    });
+  </script>
+</body>
+</html>
