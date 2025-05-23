@@ -12,6 +12,7 @@
       --text-dark: #dddddd;
       --btn-bg-light: rgba(0, 0, 0, 0.1);
       --btn-bg-dark: rgba(255, 255, 255, 0.15);
+      --content-width: 700px;
     }
     html[data-theme='light'] {
       background-color: var(--bg-light);
@@ -23,10 +24,34 @@
     }
     body {
       margin: 0;
-      padding: 40px 60px;
+      padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       line-height: 1.6;
       transition: background-color 0.3s, color 0.3s;
+      min-height: 100vh;
+    }
+    .wrapper {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 32px 16px 40px 16px;
+      background: transparent;
+    }
+    @media (max-width: 600px) {
+      .wrapper {
+        padding: 16px 4vw 28px 4vw;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      body {
+        font-size: 0.98rem;
+      }
+    }
+    @media (min-width: 900px) {
+      .wrapper {
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
     }
     h1, h2, h3 {
       margin-top: 2em;
@@ -93,98 +118,113 @@
       margin-top: 3rem;
       opacity: 0.8;
     }
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 480px) {
+      .top-bar {
+        margin-bottom: 12px;
+      }
+      .theme-toggle {
+        font-size: 0.98rem;
+        padding: 0.44em 0.6em;
+      }
+    }
   </style>
 </head>
 <body>
-  <div style="display:flex; justify-content:flex-end; margin-bottom:20px;">
-    <button class="theme-toggle" id="toggleBtn">
-      <svg id="themeIcon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M21.752 15.002A9.718 9.718 0 0112 21.75 9.75 9.75 0 1121.752 15z"/>
-      </svg>
-      <span id="toggleText">Light Mode</span>
-    </button>
+  <div class="wrapper">
+    <div class="top-bar">
+      <button class="theme-toggle" id="toggleBtn">
+        <svg id="themeIcon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M21.752 15.002A9.718 9.718 0 0112 21.75 9.75 9.75 0 1121.752 15z"/>
+        </svg>
+        <span id="toggleText">Light Mode</span>
+      </button>
+    </div>
+
+    <h1>Terms &amp; Conditions and Privacy Policy for The CC (The Currency Converter)</h1>
+    <p class="last-updated">Last updated: May 21, 2025</p>
+
+    <h2>1. License &amp; Use</h2>
+    <ul>
+      <li><strong>Free License.</strong> You are granted a personal, non-exclusive, non-transferable, revocable license to install and use the App on your mobile device for personal or business currency-conversion purposes.</li>
+      <li><strong>No Warranty.</strong> The App and its Services are provided “AS IS” without any warranties—express or implied—regarding accuracy, availability, or fitness for a particular purpose.</li>
+    </ul>
+    <hr>
+
+    <h2>2. App Data Handling</h2>
+    <h3>No Data Collection by the App</h3>
+    <ul>
+      <li>The App does <strong>not</strong> collect, store, or transmit any personal or usage data.</li>
+      <li>There is no analytics SDK, crash-reporting, or user-tracking built into the App.</li>
+    </ul>
+    <h3>Transient Caching</h3>
+    <ul>
+      <li>To optimize performance, the App may hold fetched exchange rates in memory for up to eight (8) hours.</li>
+      <li>This cache is cleared when the App is closed or after eight hours and is never written to permanent storage.</li>
+    </ul>
+    <hr>
+
+    <h2>3. API &amp; Exchange‐Rate Data</h2>
+    <ul>
+      <li><strong>Source of Data.</strong> All currency-exchange rates (“Data”) are fetched in real time, on demand, from the currencybeacon.com API.</li>
+      <li><strong>Attribution.</strong> In compliance with API Provider requirements, the App displays “Data provided by currencybeacon.com” on its About/Legal screen.</li>
+      <li><strong>Data Accuracy.</strong> Rates are for informational purposes only; actual market rates may vary.</li>
+    </ul>
+    <hr>
+
+    <h2>4. Privacy Policy</h2>
+    <h3>4.1 Information We Collect</h3>
+    <ul>
+      <li><strong>None.</strong> We do not collect any personally identifiable information (PII), usage analytics, or crash reports.</li>
+    </ul>
+    <h3>4.2 Third-Party Data Handling</h3>
+    <ul>
+      <li><strong>Responsibility.</strong> All data privacy and retention practices for exchange rates are managed by the API Provider. Direct any inquiries about that service’s privacy practices to currencybeacon.com.</li>
+    </ul>
+    <h3>4.3 Children’s Privacy</h3>
+    <ul>
+      <li><strong>Under 13.</strong> The App is not intended for use by children under 13. We do not knowingly collect information from minors.</li>
+    </ul>
+    <h3>4.4 Security</h3>
+    <ul>
+      <li><strong>Transmission.</strong> All API requests use HTTPS/TLS encryption.</li>
+      <li><strong>No Persistent Storage.</strong> No user or rate data is stored on the App or our servers.</li>
+    </ul>
+    <hr>
+
+    <h2>5. Prohibited Conduct</h2>
+    <ol>
+      <li>Reverse-engineer, decompile, modify, or tamper with the App’s code.</li>
+      <li>Extract, redistribute, or republish Data outside the App (e.g., embedding rates into other products).</li>
+      <li>Use automated scripts or scraping tools to query the API beyond normal App behavior.</li>
+    </ol>
+    <hr>
+
+    <h2>6. Liability Limitation</h2>
+    <p>To the fullest extent permitted by law, neither the Developer nor the API Provider shall be liable for any indirect, incidental, special, or consequential damages arising from your use of the App or its Data. Our total liability is limited to the cost of the device on which the App is installed, if applicable.</p>
+    <hr>
+
+    <h2>7. Termination</h2>
+    <p>We may suspend or terminate this Agreement and your access to the App if you violate any terms herein. Upon termination, you must uninstall the App and cease use of all Data.</p>
+    <hr>
+
+    <h2>8. Changes to This Agreement</h2>
+    <p>We may update this Agreement at any time. Changes take effect upon posting the revised “Last updated” date. Continued use after changes signifies acceptance. If you do not agree, please uninstall the App.</p>
+    <hr>
+
+    <h2>9. Governing Law & Jurisdiction</h2>
+    <p>This Agreement shall be governed by and construed in accordance with the laws of India, including but not limited to the Information Technology Act, 2000 and relevant consumer protection laws. Any dispute arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts in Bengaluru, Karnataka, India.</p>
+    <hr>
+
+    <h2>10. Contact</h2>
+    <p class="contact">For questions, legal notices, or privacy inquiries, please contact:<br><a href="mailto:c1ph3rj@gmail.com">c1ph3rj@gmail.com</a></p>
+    <hr>
+    <em>By using The CC, you acknowledge that you have read, understood, and agree to these Terms & Conditions and Privacy Policy.</em>
   </div>
-
-  <h1>Terms &amp; Conditions and Privacy Policy for The CC (The Currency Converter)</h1>
-  <p class="last-updated">Last updated: May 21, 2025</p>
-
-  <h2>1. License &amp; Use</h2>
-  <ul>
-    <li><strong>Free License.</strong> You are granted a personal, non-exclusive, non-transferable, revocable license to install and use the App on your mobile device for personal or business currency-conversion purposes.</li>
-    <li><strong>No Warranty.</strong> The App and its Services are provided “AS IS” without any warranties—express or implied—regarding accuracy, availability, or fitness for a particular purpose.</li>
-  </ul>
-  <hr>
-
-  <h2>2. App Data Handling</h2>
-  <h3>No Data Collection by the App</h3>
-  <ul>
-    <li>The App does <strong>not</strong> collect, store, or transmit any personal or usage data.</li>
-    <li>There is no analytics SDK, crash-reporting, or user-tracking built into the App.</li>
-  </ul>
-  <h3>Transient Caching</h3>
-  <ul>
-    <li>To optimize performance, the App may hold fetched exchange rates in memory for up to eight (8) hours.</li>
-    <li>This cache is cleared when the App is closed or after eight hours and is never written to permanent storage.</li>
-  </ul>
-  <hr>
-
-  <h2>3. API &amp; Exchange‐Rate Data</h2>
-  <ul>
-    <li><strong>Source of Data.</strong> All currency-exchange rates (“Data”) are fetched in real time, on demand, from the currencybeacon.com API.</li>
-    <li><strong>Attribution.</strong> In compliance with API Provider requirements, the App displays “Data provided by currencybeacon.com” on its About/Legal screen.</li>
-    <li><strong>Data Accuracy.</strong> Rates are for informational purposes only; actual market rates may vary.</li>
-  </ul>
-  <hr>
-
-  <h2>4. Privacy Policy</h2>
-  <h3>4.1 Information We Collect</h3>
-  <ul>
-    <li><strong>None.</strong> We do not collect any personally identifiable information (PII), usage analytics, or crash reports.</li>
-  </ul>
-  <h3>4.2 Third-Party Data Handling</h3>
-  <ul>
-    <li><strong>Responsibility.</strong> All data privacy and retention practices for exchange rates are managed by the API Provider. Direct any inquiries about that service’s privacy practices to currencybeacon.com.</li>
-  </ul>
-  <h3>4.3 Children’s Privacy</h3>
-  <ul>
-    <li><strong>Under 13.</strong> The App is not intended for use by children under 13. We do not knowingly collect information from minors.</li>
-  </ul>
-  <h3>4.4 Security</h3>
-  <ul>
-    <li><strong>Transmission.</strong> All API requests use HTTPS/TLS encryption.</li>
-    <li><strong>No Persistent Storage.</strong> No user or rate data is stored on the App or our servers.</li>
-  </ul>
-  <hr>
-
-  <h2>5. Prohibited Conduct</h2>
-  <ol>
-    <li>Reverse-engineer, decompile, modify, or tamper with the App’s code.</li>
-    <li>Extract, redistribute, or republish Data outside the App (e.g., embedding rates into other products).</li>
-    <li>Use automated scripts or scraping tools to query the API beyond normal App behavior.</li>
-  </ol>
-  <hr>
-
-  <h2>6. Liability Limitation</h2>
-  <p>To the fullest extent permitted by law, neither the Developer nor the API Provider shall be liable for any indirect, incidental, special, or consequential damages arising from your use of the App or its Data. Our total liability is limited to the cost of the device on which the App is installed, if applicable.</p>
-  <hr>
-
-  <h2>7. Termination</h2>
-  <p>We may suspend or terminate this Agreement and your access to the App if you violate any terms herein. Upon termination, you must uninstall the App and cease use of all Data.</p>
-  <hr>
-
-  <h2>8. Changes to This Agreement</h2>
-  <p>We may update this Agreement at any time. Changes take effect upon posting the revised “Last updated” date. Continued use after changes signifies acceptance. If you do not agree, please uninstall the App.</p>
-  <hr>
-
-  <h2>9. Governing Law & Jurisdiction</h2>
-  <p>This Agreement shall be governed by and construed in accordance with the laws of India, including but not limited to the Information Technology Act, 2000 and relevant consumer protection laws. Any dispute arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts in Bengaluru, Karnataka, India.</p>
-  <hr>
-
-  <h2>10. Contact</h2>
-  <p class="contact">For questions, legal notices, or privacy inquiries, please contact:<br><a href="mailto:c1ph3rj@gmail.com">c1ph3rj@gmail.com</a></p>
-  <hr>
-  <em>By using The CC, you acknowledge that you have read, understood, and agree to these Terms & Conditions and Privacy Policy.</em>
-
   <script>
     const btn = document.getElementById('toggleBtn');
     const icon = document.getElementById('themeIcon-dark');
